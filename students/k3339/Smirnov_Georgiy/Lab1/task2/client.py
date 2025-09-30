@@ -1,6 +1,5 @@
-import socket  # Работа с сетью
+import socket  
 
-# Создаём TCP-сокет клиента
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client.connect(('localhost', 9000))
 print('Введите катеты через пробел (например: 3 4):')

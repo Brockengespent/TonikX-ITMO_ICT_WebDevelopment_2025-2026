@@ -1,4 +1,4 @@
-import socket  # Работа с сетью
+import socket
 
 def pythagoras(a, b):
     return (a ** 2 + b ** 2) ** 0.5

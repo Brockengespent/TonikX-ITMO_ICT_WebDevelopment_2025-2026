@@ -10,7 +10,7 @@ print('Сервер журнала оценок запущен… http://localho
 while True:
     client, addr = server.accept()
     request = client.recv(1024).decode()
-    # Простейший разбор метода запроса
+
     if "GET" in request:
         body = """
         <html>
@@ -25,7 +25,7 @@ while True:
         body += "</ul></body></html>"
         response = "HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=utf-8\r\n\r\n" + body
     elif "POST" in request:
-        # Пример разбора тела POST (очень упрощённо)
+
         if '\r\n\r\n' in request:
             post_data = request.split('\r\n\r\n', 1)[1]
             parts = post_data.split('&')
